@@ -75,10 +75,8 @@ Chunk 16: To reset your password open Settings and choose Security Click Forgot 
 Chunk 17: Check your inbox for the reset link and follow the instructions If no email arrives within five minutes
 
 
-Query:
 query = "How do I reset my password?"
 
-Output:
 Most relevant answer: To reset your password open Settings and choose Security Click Forgot Password and enter your registered email address  
 Second relevant answer: Check your inbox for the reset link and follow the instructions If no email arrives within five minutes  
 
