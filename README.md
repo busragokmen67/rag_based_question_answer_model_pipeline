@@ -12,7 +12,6 @@
 
 💬 Answer questions using falcon-rw-1b (local, CPU-friendly)
 
-✅ Fully offline, no OpenAI API required
 
 
 
@@ -79,7 +78,7 @@ Finds the top k most similar chunks using cosine similarity between your query a
    
 answer = generate_answer_directly(query, top_chunks)
 
-Uses a local language model (falcon-rw-1b that is a type of small langchain model) to generate a contextual answer from the top chunks.
+I used a local language model (falcon-rw-1b that is a type of small langchain model) to generate a contextual answer from the top chunks.
 
 
 ❓ Example
@@ -101,7 +100,7 @@ Second relevant answer: Check your inbox for the reset link and follow the instr
 
 🧠 Answer(with LLM): Changing your password will ensure you are the only person who can access your account, and will help improve your security..
 
-⚠️ Notes
+⚠️ Notes;
 
 The default model falcon-rw-1b is CPU-friendly, but slow. This is a form of small LangChain.
 
@@ -115,7 +114,7 @@ scikit-learn	              ≥1.0
 
 
 
-🧠 Attribution
+🧠 Attribution;
 
 SentenceTransformers
 
