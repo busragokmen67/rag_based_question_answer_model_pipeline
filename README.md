@@ -59,6 +59,20 @@ chunks = split_text_into_chunks_based_on_min_file(texts)
 
 The system finds the smallest file and uses its word count to split all other files into equally sized chunks.
 
+Minimum Words per Chunk: 18 
+
+Total Chunks: 22 
+
+
+Examples:
+
+
+Chunk 1: The HTTP API supports three endpoints POST apiindex build or rebuild the index POST apiquery payload question top_k... 
+
+Chunk 2: GET apistatus returns ready true when the index is ready Before running set your API keys as environment... 
+
+Chunk 3: variables Use OPENAI_API_KEY for OpenAI models and LLAMA_API_KEY for hosted Llama endpoints To use a local embedding model... 
+
 3. Embedding with Sentence-BERT
    
 e_model = SentenceTransformer('all-MiniLM-L6-v2')
