@@ -33,12 +33,16 @@ directory = '/path/to/docs'
 
 ⚙️ Installation
 
+
 Make sure you are using Python 3.8+. Then install the required packages:
+
 
 !pip install sentence-transformers scikit-learn transformers torch
 
 
 I used Google Colab, you may want to restart the runtime after installing.
+
+
 
 
 🚀 How It Works
@@ -102,11 +106,11 @@ Second relevant answer: Check your inbox for the reset link and follow the instr
 The default model falcon-rw-1b is CPU-friendly, but slow. This is a form of small LangChain.
 
 
-📦 Requirements
-Package	                    Version
-sentence-transformers	      ≥2.2
-transformers	              ≥4.30
-torch	                      ≥1.12
+📦 Requirements;
+
+sentence-transformers	      ≥2.2,
+transformers	              ≥4.30,
+torch	                      ≥1.12,
 scikit-learn	              ≥1.0
 
 
