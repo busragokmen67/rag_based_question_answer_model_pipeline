@@ -40,28 +40,33 @@ I used Google Colab, you may want to restart the runtime after installing.
 🚀 How It Works
 
 1. Load and Preprocess
+   
 texts = load_and_preprocess_text_files(directory)
 
 This reads all .txt files, removes punctuation and whitespace, and stores them as a list.
 
 2. Chunking
+   
 chunks = split_text_into_chunks_based_on_min_file(texts)
 
 The system finds the smallest file and uses its word count to split all other files into equally sized chunks.
 
 3. Embedding with Sentence-BERT
+   
 e_model = SentenceTransformer('all-MiniLM-L6-v2')
 embeddings = e_model.encode(chunks, convert_to_tensor=True)
 
 Generates sentence embeddings for each chunk.
 
 4. Query + Retrieval
+   
 top_chunks, _ = retrieve_top_k_chunks_cosine(query, e_model, embeddings, chunks, k=2)
 
 Finds the top k most similar chunks using cosine similarity between your query and the document embeddings.
 
 
 5. Generate Answer with LLM
+   
 answer = generate_answer_directly(query, top_chunks)
 
 Uses a local language model (falcon-rw-1b that is a type of small langchain model) to generate a contextual answer from the top chunks.
