@@ -15,6 +15,8 @@
 ✅ Fully offline, no OpenAI API required
 
 
+
+
 📁 Directory Structure
 
 Place your .txt files inside a folder. Example:
@@ -22,10 +24,12 @@ Place your .txt files inside a folder. Example:
 project-root/
 ├── qa.py
 ├── docs/
-│   ├── file1.txt
-│   ├── file2.txt
+│   ├── api.txt
+│   ├── usage.txt
 
 directory = '/path/to/docs'
+
+
 
 ⚙️ Installation
 
@@ -38,6 +42,7 @@ I used Google Colab, you may want to restart the runtime after installing.
 
 
 🚀 How It Works
+
 
 1. Load and Preprocess
    
@@ -54,6 +59,7 @@ The system finds the smallest file and uses its word count to split all other fi
 3. Embedding with Sentence-BERT
    
 e_model = SentenceTransformer('all-MiniLM-L6-v2')
+
 embeddings = e_model.encode(chunks, convert_to_tensor=True)
 
 Generates sentence embeddings for each chunk.
@@ -77,15 +83,18 @@ Uses a local language model (falcon-rw-1b that is a type of small langchain mode
 Given these input .txt files:
 
 Chunk 16: To reset your password open Settings and choose Security Click Forgot Password and enter your registered email address
+
 Chunk 17: Check your inbox for the reset link and follow the instructions If no email arrives within five minutes
 
 
 query = "How do I reset my password?"
 
 Most relevant answer: To reset your password open Settings and choose Security Click Forgot Password and enter your registered email address  
+
 Second relevant answer: Check your inbox for the reset link and follow the instructions If no email arrives within five minutes  
 
 🔍 Question: How do I reset my password?  
+
 🧠 Answer(with LLM): Changing your password will ensure you are the only person who can access your account, and will help improve your security..
 
 ⚠️ Notes
